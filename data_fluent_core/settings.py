@@ -52,7 +52,7 @@ ROOT_URLCONF = 'data_fluent_core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['data_fluent_core/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -115,4 +115,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+# # This setting defines the additional locations the staticfiles app will traverse
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+# The single folder you want to collect all your static files into when you run collectstatic
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# URL to use when referring to static files located in STATIC_ROOT.
 STATIC_URL = '/static/'
