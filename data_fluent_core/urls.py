@@ -6,8 +6,8 @@ from . import views
 
 urlpatterns = [
     # AUTH
-    # path('accounts/', include('accounts.urls')),
-    # path('admin/', admin.site.urls),
+    path('accounts/', include('accounts.urls')),
+    path('admin/', admin.site.urls),
 
     # HOMEPAGE
     path('', views.dashboard, name='dashboard'),

@@ -26,6 +26,12 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# Redirection for the authentication
+LOGIN_URL = 'accounts/login'
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL = 'dashboard'
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -35,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'widget_tweaks',
+    'accounts'
 ]
 
 MIDDLEWARE = [
