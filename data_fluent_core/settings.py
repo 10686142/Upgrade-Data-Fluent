@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'react_helper', # Needs to be before staticfiles
     'django.contrib.staticfiles',
     'widget_tweaks',
     'accounts'
@@ -104,6 +105,15 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# The name of the folder containing the CRA project files,
+# relative to the base directory of the Django project (the folder containing manage.py):
+REACT_APPNAME = 'frontend_react' # Name of the React project inside our Django project
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+X_FRAME_OPTIONS = 'ALLOW-FROM http://localhost:3000'
+
 
 
 # Internationalization
