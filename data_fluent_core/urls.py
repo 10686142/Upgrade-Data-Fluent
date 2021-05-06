@@ -1,4 +1,4 @@
-"""upgrade_data_fluent URL Configuration
+"""data_fluent_core URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/

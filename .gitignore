@@ -1,6 +1,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/django
 # Edit at https://www.toptal.com/developers/gitignore?templates=django
 
+## Custom
+data_fluent_core/secrets.py
+
+
 ### Django ###
 *.log
 *.pot
