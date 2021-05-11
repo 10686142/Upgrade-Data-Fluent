@@ -62,6 +62,8 @@ main project in this repository. These are the improvements I am implementing:
 
 - Investigating Websockets as an alternative to REST APIs
 
+    - I have created and intergrated a django reactjs briding app which can easily intergate a create-react-app into a django project. It also supports hot-reloading for more seemingless development
+
 - CI/CD by leveraging Github Actions
 
 - Git improvements:
