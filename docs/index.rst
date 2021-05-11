@@ -10,6 +10,13 @@ Welcome to Upgrade Data Fluent's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   introduction.rst
+   regex_c.rst
+   unit_testing.rst
+   websockets.rst
+   ci_cd.rst
+   git_imp.rst
+
 
 Indices and tables
 ==================
