@@ -55,13 +55,45 @@ Intergration Steps
 
        $ yarn start
 
-#. Inside your main terminal, which is still at the root of your django project, start the server:
+#. Stop the reactjs server and create a build of the app's js and css:
+
+    .. code-block:: console
+
+       $ yarn build
+
+#. Inside the html template file you want to use to connect to reactjs, add this:
+
+    ::
+
+        {% load react_helper_tags %}
+        {% load static %}
+
+        {% get_react_static_css %}
+        <div id="react" ></div>
+        <script>
+            window.component = '{{ component }}';
+        </script>
+        {% get_react_static_js %}
+
+#. Inside your main terminal, which is still at the root of your django project, run this custom command to collect the build into your project's 'static' directory:
+
+    .. code-block:: console
+
+       $ python manage.py collectstatic_react
+
+#. Now you can start the server:
 
     .. code-block:: console
 
        $ python manage.py runserver
 
-#. Lastly, validate from the terminal console outputs if the intergration went well, and that your Django application is aware that the React app is running.
+#. You should now see your react app loaded into the html template you loaded your code in
+
+
+Validation
+##################
+
+You can validate from the terminal console outputs if the intergration went well, and that your Django application is aware that the React app is running.
 
     - This way Django know when to use the 'hot-reload' functionality of the react app. If react app server isn't running, then helper app will serve the build js and css files for when you have ran 'yarn build'.
     - Check to see if it outputs 'INFO:root:React liveserver is running':
@@ -73,6 +105,7 @@ Intergration Steps
         INFO:root:React liveserver is running at: http://localhost:3000
         Watching for file changes with StatReloader
         .........
+
 
 
 Websocket Communication
