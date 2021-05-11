@@ -1,0 +1,9 @@
+{% load react_helper_tags %}
+{% load static %}
+
+{% get_react_static_css %}
+<div id="react" ></div>
+<script>
+    window.component = '{{ component }}';
+</script>
+{% get_react_static_js %}

@@ -11,6 +11,10 @@ urlpatterns = [
 
     # HOMEPAGE
     path('', views.dashboard, name='dashboard'),
+
+    # REACT WEBSOCKET PAGE
+    path('react_app', views.mainReactApp, name='reactApp'),
+
 ]
 # This makes sure that when the /static is visited it goes to the right direcory
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
