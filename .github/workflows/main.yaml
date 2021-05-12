@@ -48,9 +48,6 @@ jobs:
         if: true # Set this to true to submit
         run: |
           pipenv run python submit.py
-      - name: Build the docs
-        run: |
-          pipenv run make html
       - name: Deploy 🚀 docs
         uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
