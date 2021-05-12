@@ -1,0 +1,61 @@
+name: CI CD
+
+# Actions triggered when direct push or PR on master
+# Repo: https://github.com/csci-e-29/2021sp-pset-0-10686142
+on:
+  push:
+    branches: [master, release]
+  pull_request:
+    branches: [master]
+
+# Environment variables to use for this script
+env:
+  # Github auth  token
+  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+  # Secret Salt
+  CSCI_SALT: ${{ secrets.CSCI_SALT }}
+
+  # Canvas secrets
+  CANVAS_TOKEN: ${{ secrets.CANVAS_TOKEN }}
+  CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+
+  # Submission url
+  CANVAS_URL: https://canvas.harvard.edu
+
+  LATE_DAYS: 0
+
+#
+jobs:
+  # Name the of the job, can be anything
+  build:
+    # Which VM it runs on
+    runs-on: ubuntu-latest
+
+    steps:
+      # This brings our source code into the current work. dir.
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pipenv
+          pipenv install --dev --ignore-pipfile --deploy
+
+      - name: Make docs
+        run: |
+          pipenv run make html
+      - name: Deploy 🚀 docs
+        uses: JamesIves/github-pages-deploy-action@4.1.2
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: docs # The folder the action should deploy.
+        working-directory: docs
+
+      # Lastly, determine if submit.py need to be ran for canvas submisssion
+      - name: Submit to Canvas
+        if: true # Set this to true to submit
+        run: |
+          pipenv run python submit.py

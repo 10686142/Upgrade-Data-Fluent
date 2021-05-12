@@ -1,6 +1,10 @@
 # Final Project
 
-Add any badges to your ***published documentation*** up here!
+## Badges
+
+[![Actions Status](https://github.com/csci-e-29/2021sp-final-project-10686142/workflows/CI%20CD/badge.svg)](https://github.com/csci-e-29/2021sp-final-project-10686142/actions)
+
+
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
