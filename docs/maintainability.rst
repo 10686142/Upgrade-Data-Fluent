@@ -29,12 +29,12 @@ Within this course, I have mastered the art of git and have mostly improved in:
 
 Here you can see an example of how my commit messages looked like before I took this class:
 
-.. image:: git_old.png
+.. image:: images/git_old.png
 
 
 These are my commit messages (including another branch) now:
 
-.. image:: git_new.png
+.. image:: images/git_new.png
 
 
 

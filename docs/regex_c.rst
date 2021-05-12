@@ -5,7 +5,7 @@ Regex in C
 
 What can a C backed for regex achieve?
 ======================================
-.. image:: regex_c.png
+.. images/image:: regex_c.png
 
 
 We can utilise a RE2 wrapper for linear-time regular expressions in Python. This is achieved by wrapping Google RE2 regular expression library in your project. Implementing this approach can boost your regex performance for heavier tasks up to 50 times.

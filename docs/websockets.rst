@@ -6,7 +6,7 @@ Web Sockets
 Why use Web Sockets?
 =================================
 
-.. image:: socket_vs_api.png
+.. images/image:: socket_vs_api.png
 
 
 - WebSocket is a low-level protocol based on the concept of socket and port, which are the underlying transport mechanism, whereas REST is based on CRUD operation.

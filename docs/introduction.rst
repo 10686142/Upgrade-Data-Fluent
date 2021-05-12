@@ -25,13 +25,13 @@ Read more about |new_tab_link|.
 How it works
 =================================
 
-.. image:: how_df_works.png
+.. image:: images/how_df_works.png
 
 
 Project Architecture
 =================================
 
-.. image:: df_architecture.png
+.. image:: images/df_architecture.png
 
 
 Process Steps
