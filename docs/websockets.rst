@@ -111,4 +111,21 @@ You can validate from the terminal console outputs if the intergration went well
 Websocket Communication
 =================================
 
-Here I will show how you Django application open a socket with the react app and do a basic data transfer.
+To use websocket comminumation within django, you do need to install uvicorn:
+
+    .. code-block:: console
+
+       $ pip install uvicorn
+
+Furthermore, you can follow multiple tutorials on how do the full setup, which comes down to switching your project from WSGI to ASGI so it support asynchronous communication.
+You can see my implementation under data_fluent_core in:
+
+    - asgi.py
+    - websocket.py
+
+
+Read more about websocket intergration in Django 3.0 and above, |new_tab_link|.
+
+.. |new_tab_link| raw:: html
+
+   <a href="https://dev.to/alexoleshkevich/websockets-in-django-3-1-532o" target="_blank">works</a>
