@@ -15,11 +15,11 @@ Welcome to Upgrade Data Fluent's documentation!
    unit_testing.rst
    websockets.rst
    maintainability.rst
+   conclusion.rst
 
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
