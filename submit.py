@@ -37,14 +37,14 @@ def submit_project():
         allow_dirty=True,
         submit_assignment=True,
     ) as (questions, qsubmission):
-        print_quiz_questions(questions)
+        # print_quiz_questions(questions)
 
         # Send back questions for test submission
         pset_answers = questions
-        # # pprint(pset_answers)
+        # pprint(pset_answers)
 
         # # Fill out the answers and make the actual submission
-        res = qsubmission.answer_submission_questions(quiz_questions=pset_answers)
+        # res = qsubmission.answer_submission_questions(quiz_questions=pset_answers)
 
     print(f"Full {ASSIGNMENT} submission complete!")
 
