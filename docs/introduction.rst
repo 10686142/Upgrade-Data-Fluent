@@ -64,12 +64,13 @@ main project in this repository. These are the improvements I am implementing:
 
     - I have created and intergrated a django reactjs briding app which can easily intergate a create-react-app into a django project. It also supports hot-reloading for more seemingless development
 
-- CI/CD by leveraging Github Actions
+- Maintainability Improvements
 
-- Git improvements:
+    - CI/CD by leveraging Github Actions
+    - Git improvements:
 
-    - Cleared git messages
-    - Branching
+        - Cleared git messages
+        - Branching
 
 
 

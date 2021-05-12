@@ -14,8 +14,7 @@ Welcome to Upgrade Data Fluent's documentation!
    regex_c.rst
    unit_testing.rst
    websockets.rst
-   ci_cd.rst
-   git_imp.rst
+   maintainability.rst
 
 
 Indices and tables
