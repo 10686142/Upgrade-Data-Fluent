@@ -3,31 +3,32 @@ from django.conf import settings
 
 # Variables to help the template determine if it should try loading assets from the REACT live server
 _REACT_DEFAULT_PORT = 3000
-_REACT_DEFAULT_HOST = 'localhost'
+_REACT_DEFAULT_HOST = "localhost"
 _port = _REACT_DEFAULT_PORT
 _host = _REACT_DEFAULT_HOST
 
 # Allow the user to specify the port create-react-app is running on
-if hasattr(settings, 'REACT_PORT') and type(settings.REACT_PORT) is int:
+if hasattr(settings, "REACT_PORT") and type(settings.REACT_PORT) is int:
     _port = settings.REACT_PORT
 
 # Allow the user to specify the host create-react-app is running on
-if hasattr(settings, 'REACT_HOST'):
+if hasattr(settings, "REACT_HOST"):
     _host = settings.REACT_HOST
 
 # The URL the create-react-app liveserver is accessible at
-REACT_LIVE_URL = 'http://{}:{}'.format(_host, _port)
+REACT_LIVE_URL = "http://{}:{}".format(_host, _port)
 
-if hasattr(settings, 'REACT_APPNAME'):
+if hasattr(settings, "REACT_APPNAME"):
     REACT_APPNAME = settings.REACT_APPNAME
 else:
-    REACT_APPNAME = 'react'
+    REACT_APPNAME = "react"
 
 # The path to the REACT project directory, relative to the Django project's base directory
-REACT_ROOT  = os.path.join(settings.BASE_DIR, REACT_APPNAME)
+REACT_ROOT = os.path.join(settings.BASE_DIR, REACT_APPNAME)
+
 
 # Used for copying build files
-REACT_DJANGO_STATIC_DIR = os.path.join(settings.BASE_DIR, 'static') + '/react'
+REACT_DJANGO_STATIC_DIR = os.path.join(settings.BASE_DIR, "static") + "/react"
 
 # TODO: If I want to publish it as a Library
 # 1) Figure out which js files for the liveserver are used for each react version

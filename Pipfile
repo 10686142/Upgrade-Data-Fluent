@@ -9,6 +9,7 @@ django-widget-tweaks = "*"
 sphinx = "*"
 sphinx-rtd-theme = "*"
 uvicorn = "*"
+csci-utils = {editable = true, git = "https://${ACCESS_TOKEN}:x-oauth-basic@github.com/csci-e-29/2021sp-csci-utils-10686142.git"}
 
 [dev-packages]
 
