@@ -50,7 +50,6 @@ jobs:
           pipenv run python submit.py
       - name: Build the docs
         run: |
-          cd docs
           pipenv run make html
       - name: Deploy 🚀 docs
         uses: JamesIves/github-pages-deploy-action@4.1.3
