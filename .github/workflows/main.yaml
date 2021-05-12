@@ -45,14 +45,15 @@ jobs:
           pipenv install --dev --ignore-pipfile --deploy
 
       - name: Make docs
-        run: |
-          pipenv run make html
-      - name: Deploy 🚀 docs
-        uses: JamesIves/github-pages-deploy-action@4.1.2
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: docs # The folder the action should deploy.
-        working-directory: docs
+      run: |
+        pipenv run make html
+      working-directory: docs
+
+      - name: Deploy 🚀 docs
+      uses: JamesIves/github-pages-deploy-action@4.1.2
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: docs # The folder the action should deploy.
 
       # Lastly, determine if submit.py need to be ran for canvas submisssion
       - name: Submit to Canvas
